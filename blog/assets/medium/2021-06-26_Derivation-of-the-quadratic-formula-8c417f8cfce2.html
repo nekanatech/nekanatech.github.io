@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Derivation of the quadratic formula</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Derivation of the quadratic formula</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+A computer scientist’s approach
+</section>
+<section data-field="body" class="e-content">
+<section name="00fe" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="faf4" id="faf4" class="graf graf--h3 graf--leading graf--title">Derivation of the quadratic formula</h3><h4 name="d7df" id="d7df" class="graf graf--h4 graf-after--h3 graf--subtitle">A computer scientist’s approach</h4><figure name="c971" id="c971" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="1*NA9C_bLxy_Wgt3ufACnqbw.png" data-width="539" data-height="420" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*NA9C_bLxy_Wgt3ufACnqbw.png"></figure><h3 name="1998" id="1998" class="graf graf--h3 graf-after--figure">Contents</h3><ol class="postList"><li name="487a" id="487a" class="graf graf--li graf-after--h3">Introduction</li><li name="00e3" id="00e3" class="graf graf--li graf-after--li">Completing the square</li><li name="2f32" id="2f32" class="graf graf--li graf-after--li">The derivation</li><li name="747c" id="747c" class="graf graf--li graf-after--li">Discussion</li><li name="410b" id="410b" class="graf graf--li graf-after--li">Endnotes</li><li name="262f" id="262f" class="graf graf--li graf-after--li">Works cited</li></ol><h3 name="95dd" id="95dd" class="graf graf--h3 graf-after--li">Introduction</h3><p name="ba26" id="ba26" class="graf graf--p graf-after--h3">This article will just be a quick proof of the quadratic formula,¹ the formula that is used to work out the solutions to the general quadratic equation.² I will not be covering the geometric intuition of the derivation and the reader need only be familiar with methods in elementary algebra.</p><h3 name="31cf" id="31cf" class="graf graf--h3 graf-after--p">Completing the square</h3><p name="9b0c" id="9b0c" class="graf graf--p graf-after--h3">The method of <em class="markup--em markup--p-em">completing the square</em> is central to deriving the quadratic formula taking the form of the trinomial below (<em class="markup--em markup--p-em">Eq. 1</em>):</p><figure name="459d" id="459d" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*G60XfbltBcyvxi-Y.png" data-width="182" data-height="24" src="https://cdn-images-1.medium.com/max/800/0*G60XfbltBcyvxi-Y.png"><figcaption class="imageCaption">Eq. 1</figcaption></figure><p name="4cba" id="4cba" class="graf graf--p graf-after--figure">The following³ is an informal description of the procedure of completing the square:</p><ol class="postList"><li name="69e5" id="69e5" class="graf graf--li graf-after--p">Divide all coefficients in the trinomial by the <code class="markup--code markup--li-code">a</code> coefficient.</li><li name="66ed" id="66ed" class="graf graf--li graf-after--li">Transpose the <code class="markup--code markup--li-code">c</code> coefficient to the other side of the equation.</li><li name="2d9e" id="2d9e" class="graf graf--li graf-after--li">Multiply the b coefficient by ½ and store the value in a new variable called ε.</li><li name="0e2a" id="0e2a" class="graf graf--li graf-after--li">Factor the trinomial expression — note that this should always result in the form: <code class="markup--code markup--li-code">(x + ε)²</code></li><li name="fcea" id="fcea" class="graf graf--li graf-after--li">Extract the roots from both sides of the equation.</li></ol><h4 name="f7d2" id="f7d2" class="graf graf--h4 graf-after--li">Example with an arbitrary trinomial:</h4><p name="8393" id="8393" class="graf graf--p graf-after--h4">Given <em class="markup--em markup--p-em">Eq. 2–1</em> :</p><figure name="4721" id="4721" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*4jbQmE8vQMV5wbdw.png" data-width="197" data-height="24" src="https://cdn-images-1.medium.com/max/800/0*4jbQmE8vQMV5wbdw.png"><figcaption class="imageCaption">Eq. 2–1</figcaption></figure><p name="2b64" id="2b64" class="graf graf--p graf-after--figure">The coefficients of the trinomial must be divided by the <code class="markup--code markup--p-code">a</code> coefficient (which is 2 in this case) to obtain <em class="markup--em markup--p-em">Eq. 2–2</em>:</p><figure name="743d" id="743d" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*9IzKtiMS5rYr1qgz.png" data-width="176" data-height="32" src="https://cdn-images-1.medium.com/max/800/0*9IzKtiMS5rYr1qgz.png"><figcaption class="imageCaption">Eq. 2–2</figcaption></figure><p name="7f90" id="7f90" class="graf graf--p graf-after--figure">Then, transpose the <code class="markup--code markup--p-code">c</code> coefficient (which is 5 in this case) to the other side of the equation to obtain <em class="markup--em markup--p-em">Eq. 2–3</em>:</p><figure name="97b2" id="97b2" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*cKJxr9SSgp6mwqKk.png" data-width="152" data-height="32" src="https://cdn-images-1.medium.com/max/800/0*cKJxr9SSgp6mwqKk.png"><figcaption class="imageCaption">Eq. 2–3</figcaption></figure><p name="4cf6" id="4cf6" class="graf graf--p graf-after--figure">Next, multiply the <code class="markup--code markup--p-code">b</code> coefficient by ½ and store the result in <code class="markup--code markup--p-code">ε.</code> Take the <code class="markup--code markup--p-code">ε</code> and square it, and add it to both sides of the equation to get<em class="markup--em markup--p-em"> Eq. 2–4</em>:</p><figure name="d9bd" id="d9bd" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*p_NKz1N97AmrMoPF.png" data-width="294" data-height="63" src="https://cdn-images-1.medium.com/max/800/0*p_NKz1N97AmrMoPF.png"><figcaption class="imageCaption">Eq. 2–4</figcaption></figure><p name="e564" id="e564" class="graf graf--p graf-after--figure">Carrying on, factor the expression where the resulting factor must be in the form <code class="markup--code markup--p-code">(x + ε)²</code> In the case of our <code class="markup--code markup--p-code">b</code> coefficient being equal to (9/4), one can reasonably infer the factor solution:</p><figure name="d4bd" id="d4bd" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*oiKVcJB-HzhWVzFR.png" data-width="212" data-height="36" src="https://cdn-images-1.medium.com/max/800/0*oiKVcJB-HzhWVzFR.png"><figcaption class="imageCaption">Eq. 2–5</figcaption></figure><p name="58bc" id="58bc" class="graf graf--p graf-after--figure">Finally, extract the roots of the equation — take the square root of both equations, which will result in:</p><figure name="db31" id="db31" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*qVyJqE77BAiY6dNm.png" data-width="127" data-height="63" src="https://cdn-images-1.medium.com/max/800/0*qVyJqE77BAiY6dNm.png"><figcaption class="imageCaption">The solution (Eq. 2–6)</figcaption></figure><h3 name="c70e" id="c70e" class="graf graf--h3 graf-after--figure">The derivation</h3><p name="084e" id="084e" class="graf graf--p graf-after--h3">To derive a general solution to the quadratic equation, one would simply need to apply the method of completing the square to the quadratic equation’s general form. I shall use a two-column proof to annotate the algebraic steps and express the general solution in a quasi-formal proof:</p><h4 name="5ed6" id="5ed6" class="graf graf--h4 graf-after--p">Theorem</h4><p name="9f90" id="9f90" class="graf graf--p graf-after--h4"><em class="markup--em markup--p-em">Eq. 1</em> is the solution to <em class="markup--em markup--p-em">Eq. 2</em></p><figure name="4ef3" id="4ef3" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*0RXDCWpQetIqs_Ye.png" data-width="118" data-height="35" src="https://cdn-images-1.medium.com/max/800/0*0RXDCWpQetIqs_Ye.png"><figcaption class="imageCaption">Eq. 3–1</figcaption></figure><figure name="13aa" id="13aa" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="0*DaHMYg09aD1bVPix.png" data-width="182" data-height="24" src="https://cdn-images-1.medium.com/max/800/0*DaHMYg09aD1bVPix.png"><figcaption class="imageCaption">Eq. 3–2</figcaption></figure><h4 name="b143" id="b143" class="graf graf--h4 graf-after--figure">Proof</h4><figure name="81fb" id="81fb" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="1*3pfKOvzALRqjbSC8qT4NcA.png" data-width="680" data-height="397" src="https://cdn-images-1.medium.com/max/800/1*3pfKOvzALRqjbSC8qT4NcA.png"></figure><h3 name="9902" id="9902" class="graf graf--h3 graf-after--figure">Discussion</h3><p name="eef0" id="eef0" class="graf graf--p graf-after--h3">This proof is a bit lackluster. I did not go into the geometric intuition of completing the square and merely took the procedure and applied it to the quadratic formula. Nevertheless, this is a publication that investigates the overlaps between mathematics and computer science in the most simple manner possible, so I think that this will suffice for the beginner.</p><p name="59b4" id="59b4" class="graf graf--p graf-after--p">Completing the square is an excellent method for solving quadratic equations when factoring methods will not suffice.</p><h4 name="034b" id="034b" class="graf graf--h4 graf-after--p">Acknowledgments</h4><p name="23c7" id="23c7" class="graf graf--p graf-after--h4">I would like to thank my college algebra professor for teaching this method to me. We did not always agree with each other, but they were a kind-hearted and understanding person.</p><h4 name="4bca" id="4bca" class="graf graf--h4 graf-after--p">Repost</h4><p name="8967" id="8967" class="graf graf--p graf-after--h4">Please note that this is a somewhat modified repost of an article that was originally published circa 2020/2018.</p><h3 name="25cb" id="25cb" class="graf graf--h3 graf-after--p">Endnotes</h3><ol class="postList"><li name="d3db" id="d3db" class="graf graf--li graf-after--h3">See Boljanovic (2016, p. 89–92) and Wolfram MathWorld’s Introduction to Quadratic Equations: <a href="http://mathworld.wolfram.com/QuadraticFormula.html" data-href="http://mathworld.wolfram.com/QuadraticFormula.html" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">http://mathworld.wolfram.com/QuadraticFormula.html</a></li><li name="497c" id="497c" class="graf graf--li graf-after--li">Ibid.</li><li name="8b62" id="8b62" class="graf graf--li graf-after--li">After Savov (2017, p. 27–29)</li></ol><h3 name="63c3" id="63c3" class="graf graf--h3 graf-after--li">Works cited</h3><p name="1efa" id="1efa" class="graf graf--p graf-after--h3">Boljanovic, V. (2016). <em class="markup--em markup--p-em">Applied Mathematical and Physical Formulas (Second Edition).</em> South Norwalk: Industrial.</p><p name="2d17" id="2d17" class="graf graf--p graf-after--p graf--trailing">Savov, I. (2017). <em class="markup--em markup--p-em">No Bullshit Guide to Linear Algebra.</em> Montréal, Québec: Minireference.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@EpsilonCalculus" class="p-author h-card">Aleksey</a> on <a href="https://medium.com/p/8c417f8cfce2"><time class="dt-published" datetime="2021-06-26T15:50:08.643Z">June 26, 2021</time></a>.</p><p><a href="https://medium.com/@EpsilonCalculus/derivation-of-the-quadratic-formula-8c417f8cfce2" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on June 14, 2022.</p></footer></article></body></html>

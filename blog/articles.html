@@ -1,0 +1,24 @@
+---
+layout: default
+link: /articles
+---
+
+{% assign posts = site.posts %}
+
+<h1>Articles</h1>
+
+<p>There are articles published directly on the Nekana Technologies website:
+
+{%- if posts.size > 0 -%}
+  <ul>
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in posts -%}
+    <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>, published on {{ post.date | date: date_format }} {%- if post.author -%} &nbsp; by {{ post.author }} {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+{%- endif -%}
+</p>
+

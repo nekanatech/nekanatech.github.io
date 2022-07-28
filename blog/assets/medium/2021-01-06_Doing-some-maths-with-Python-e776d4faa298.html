@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Doing some maths with Python</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Doing some maths with Python</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Two case studies of “simulating” the answer to maths questions
+</section>
+<section data-field="body" class="e-content">
+<section name="91be" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="8550" id="8550" class="graf graf--h3 graf--leading graf--title">Doing some maths with Python</h3><h4 name="7e80" id="7e80" class="graf graf--h4 graf-after--h3 graf--subtitle">Two case studies of “simulating” the answer to maths questions</h4><figure name="afd0" id="afd0" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="1*xbrytNAo0-B6608PcS-snA.png" data-width="691" data-height="413" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*xbrytNAo0-B6608PcS-snA.png"></figure><p name="8665" id="8665" class="graf graf--p graf-after--figure">There’s a nice Twitter user called <a href="https://twitter.com/GWOMaths" data-href="https://twitter.com/GWOMaths" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">@GWOMaths</a> who posts maths problems for other users to solve. I occasionally do them and would like to discuss a couple of them where the solution was discovered with a bit of Python scripting. I’ll post the original solutions that I posted to my (now locked) Twitter account and discuss any possible improvements that I could have made to the code.</p><h3 name="9ab6" id="9ab6" class="graf graf--h3 graf-after--p">Problem 1</h3><figure name="e0e4" id="e0e4" class="graf graf--figure graf--iframe graf-after--h3"><blockquote class="twitter-tweet"><a href="https://twitter.com/GWOMaths/status/1309734448276140033?s=20"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><figcaption class="imageCaption"><em class="markup--em markup--figure-em">Posted/Solved c. Sept. 2020</em></figcaption></figure><p name="8e9f" id="8e9f" class="graf graf--p graf-after--figure">I didn’t know what the Collatz conjecture is, so I did some casual internet research, wound up on its Wikipedia page (<a href="https://en.wikipedia.org/w/index.php?title=Collatz_conjecture&amp;oldid=980414586" data-href="https://en.wikipedia.org/w/index.php?title=Collatz_conjecture&amp;oldid=980414586" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">here</a>) and got the definition of the Collatz function:</p><figure name="9ce5" id="9ce5" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*U88GpbV31Cfjb3-pRugLjg.png" data-width="342" data-height="76" src="https://cdn-images-1.medium.com/max/800/1*U88GpbV31Cfjb3-pRugLjg.png"><figcaption class="imageCaption">Adapted from Wikipedia article on Collatz conjecture.</figcaption></figure><p name="6627" id="6627" class="graf graf--p graf-after--figure">The Collatz conjecture states that given an initial number <code class="markup--code markup--p-code">n</code>, the evolution of the function will eventually result in 1. So given an initial number 33, how many iterations will it take to reach 1?</p><p name="25b8" id="25b8" class="graf graf--p graf-after--p">I derived my solution with a computer simulation programmed in Python. I implemented a while loop that would keep on running an implementation of the Collatz function and storing the result in <code class="markup--code markup--p-code">x</code> — which by the way stores the initial 33 value. The result is 26 iterations and my implementation is below:</p><figure name="8dc4" id="8dc4" class="graf graf--figure graf--iframe graf-after--p"><script src="https://gist.github.com/Alekseyyy/c013a7786655de51ffa28c6187888e67?file=medium.self.012021.c1.py.js"></script></figure><h3 name="46c4" id="46c4" class="graf graf--h3 graf-after--figure">Problem 2</h3><figure name="6dde" id="6dde" class="graf graf--figure graf--iframe graf-after--h3"><blockquote class="twitter-tweet"><a href="https://twitter.com/GWOMaths/status/1331492817575751682"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><figcaption class="imageCaption"><em class="markup--em markup--figure-em">Posted/Solved c. Nov. 2020</em></figcaption></figure><p name="1829" id="1829" class="graf graf--p graf-after--figure">What I did to solve this one was implement a simulation that worked out the total number of combinations with list comprehension. Then, I would iterate through all possible combinations and increment the <code class="markup--code markup--p-code">target</code> variable by 1 every time it meets the criteria of the sum of <code class="markup--code markup--p-code">die_1</code> and <code class="markup--code markup--p-code">die_2</code> being equal to 5 <code class="markup--code markup--p-code">xor</code> 6; then the <code class="markup--code markup--p-code">target</code> would be divided by the total number of combinations.</p><p name="2568" id="2568" class="graf graf--p graf-after--p">The answer is 25.0 per cent and my implementation can be shown below:</p><figure name="dddc" id="dddc" class="graf graf--figure graf--iframe graf-after--p"><script src="https://gist.github.com/Alekseyyy/c013a7786655de51ffa28c6187888e67?file=medium.self.012021.c2.py.js"></script></figure><h3 name="a236" id="a236" class="graf graf--h3 graf-after--figure">Final thoughts</h3><p name="2637" id="2637" class="graf graf--p graf-after--h3">I’m not a pure mathematician, so there are probably more elegant ways to work out the solution to these problems. It’s just interesting to use computer simulations to do them without needing ultra-deep background knowledge.</p><p name="28a0" id="28a0" class="graf graf--p graf-after--p">Hopefully these two case studies have demonstrated how useful Python can be when solving sundry maths problems. And consider giving <a href="https://twitter.com/GWOMaths" data-href="https://twitter.com/GWOMaths" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">@GWOMaths</a> a follow cos’ they’re awesome and post problems that you can test your programming skills against 😄</p><h4 name="6620" id="6620" class="graf graf--h4 graf-after--p">Improvements</h4><p name="7c58" id="7c58" class="graf graf--p graf-after--h4 graf--trailing">A couple of quirks that I noticed in my solution to problem 2 is that I could have used a tuple instead of a list when defining the dice, and I could have defined the dice as <code class="markup--code markup--p-code">die_1 = die_2 = (x for x in range(1, 7))</code> . Apart from reducing the whitespace, I can’t think of other ways to improve the code.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@EpsilonCalculus" class="p-author h-card">Aleksey</a> on <a href="https://medium.com/p/e776d4faa298"><time class="dt-published" datetime="2021-01-06T04:23:20.494Z">January 6, 2021</time></a>.</p><p><a href="https://medium.com/@EpsilonCalculus/doing-some-maths-with-python-e776d4faa298" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on June 14, 2022.</p></footer></article></body></html>
