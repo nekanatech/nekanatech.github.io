@@ -1,12 +1,13 @@
 title: Nekana Technologies
 author:
-  name: A. S. "Aleksey" Ahmann
+  name: Alexander Ahmann
   email: alekseyyy2@outlook.com
 description: > # this means to ignore newlines until "show_excerpts:"
   Aleksey's blog
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
+url: https://elegant-blini-c53ec9.netlify.app/
 baseurl: /blog
 
 # Minima date format
