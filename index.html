@@ -1,103 +1,158 @@
-<!doctype html>
-<html lang="en" class="h-100">
-  <head>
-  
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.101.0">
-    <title>Nekana Technologies</title>
+---
+layout: default
+---
 
-    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
-
-    <!-- Custom styles for this template -->
-    <link href="./assets/cover.css" rel="stylesheet">
-  </head>
-
-<body class="d-flex h-100" id="page-top">
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto"> <!-- class="mb-auto" -->
-    <a href="./index.html"><h3 class="float-md-start mb-0 text-white">Nekana Technologies</h3></a>
-    <div>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <!--<a class="nav-link text-white fw-bold py-1 px-0" href="./blog">Blog</a>-->
-        <!--<a class="nav-link text-white fw-bold py-1 px-0" href="#projects">Projects</a>-->
-      </nav>
+<!-- Showcase -->
+<section id="home"
+  class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+>
+  <div class="container">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <div>
+        <h1>Nekana <span class="text-warning"> Technologies </span></h1>
+        <p class="lead my-4">
+          Finesse in data-driven I.T. consulting and engineering.
+        </p>
+      </div>
+      <!--<img
+        class="img-fluid w-50 d-none d-sm-block"
+        src="img/showcase.svg"
+        alt=""
+      />-->
     </div>
-  </header>
+  </div>
+</section>
 
-  <main class="px-3 text-center">
-    <h1>Nekana Technologies</h1>
-    <p class="lead">Portfolio website for A. S. Ahmann</p> 
+<!-- About Section -->
+<section id="about" class="p-5">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="{{site.baseurl}}/assets/blackswan.png" class="img-fluid" alt="" />
+      </div>
+      <div class="col-md p-5">
+        <h2>About us</h2>
+        <p class="lead">
+          Nekana Technologies is a portfolio website showcasing the works of A. S. "Aleksey" Ahmann.
+        </p>
+        <p>
+          I have experience, both in a professional and personal capacity, in computing and its relation to other subject matters. I am currently majoring in computer science with a concentration in data analysis and a minor in mathematics. My academic interests are system programming, computer networks, machine learning and bioinformatics.
+        </p>
+        <a href="{{site.baseurl}}/assets/resume.pdf" target="_blank" class="btn btn-light mt-3">
+          <i class="bi bi-chevron-right"></i> Download my résumé
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Sections (Boxes) -->
+<section id="projects" class="p-5">
+  <div class="container">
+    <h2 class="text-center">Projects</h2>
+    <p class="text-center lead">A selection of projects that I have worked on that are worth discussing.</p>
+    <br />
+    {% for project in site.data.projects %}
+    {% assign mod = forloop.index | modulo:3 %}
     
-    <p class="lead">
-      <a href="./resume.pdf" target="_blank" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Download my résumé</a>
-    </p>
-  </main>
+    {% if forloop.first == true %}
+      <div class="row text-center g-4">
+    {% elsif mod == 0 %}
+      </div> <br />
+      <div class="row text-center g-4">
+    {% endif %}
+    
+        <div class="col-md">
+          <div class="bg-dark text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-person-square"></i>
+              </div>
+              <h3 class="card-title mb-3 text-warning">{{project.name}}</h3>
+              <p class="card-text">
+                {{project.description}}
+              </p>
+              <a href="{{project.link}}" target="_blank" class="btn btn-light mt-3">
+                <i class="bi bi-chevron-right"></i> More
+              </a>
+            </div>
+          </div>
+        </div>
+        {% if forloop.last == true %}
+          </div>
+        {% endif %}
+    {% endfor %}
+</section>
 
-  <footer class="mt-auto text-white text-center">
-    <p class="lead">
-      <a href="https://twitter.com/EpsilonCalculus" target="_blank"> <img width=50px; src="./assets/sm-icons/twitter.png" /></a> &nbsp; &nbsp; &nbsp;
-      <a href="https://github.com/Alekseyyy" target="_blank"> <img width=41px; src="./assets/sm-icons/github.png" /></a> &nbsp; &nbsp; &nbsp;
-      <a href="https://medium.com/@EpsilonCalculus" target="_blank"><img width=50px; src="./assets/sm-icons/medium.png" /></a>
-    </p> <br/>
-    <p>Modified "Cover" template by Twitter user <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-  </footer>
-</div>
+<!-- Question Accordion -->
+<section id="questions" class="p-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion accordion-flush" id="questions">
+          {% for item in site.data.faq %}
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-{{item.number}}"
+              >
+                {{ item.question }}
+              </button>
+            </h2>
+            <div
+              id="question-{{item.number}}"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                {{ item.answer }}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
 
-</body>
-</html>
+<!-- Contact -->
+
+<section id="contact" class="container p-5">
+  <h2 class="text-center mb-4">Contact Info</h2>
+  <div class="container p-5">
+    <div class="row g-4">
+      <div class="col-md">
+        <!-- original contact info heading here -->
+        <ul class="list-group list-group-flush lead">
+          <!--<li class="list-group-item">
+            <span class="fw-bold">PO Box:</span> TBA
+          </li>-->
+          <li class="list-group-item">
+            <span class="fw-bold">Phone:</span> (646) 883-3084
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Email:</span> <a href="mailto:alexander.ahmann@outlook.com">alexander.ahmann@outlook.com</a>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Keybase:</span> <a href="https://keybase.io/epsiloncalculus">@epsiloncalculus</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <!--<div id="map"></div>-->
+        <ul class="list-group list-group-flush lead">
+          <li class="list-group-item">
+            <span class="fw-bold">Twitter:</span> <a href="https://twitter.com/EpsilonCalculus" target="_blank">@EpsilonCalculus</a>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">GitHub:</span> <a href="https://github.com/Alekseyyy" target="_blank">@Alekseyyy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
