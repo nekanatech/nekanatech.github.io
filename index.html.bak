@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+  <div class="container">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <div>
+        <h1> Nekana <span class="text-warning"> Technologies </span></h1>
+      </div>
+    </div>
+    <!-- Introduction -->
+    <div class="container">
+      <p class="lead my-4">
+        I am a student at <a href="https://snhu.edu">Southern New Hampshire University</a> studying computer science with a minor in mathematics and concentration in data analysis. My main interests are systems programming, computer networks, machine learning and bioinformatics.
+      </p>
+    </div>
+    <!--<div class="text-center">
+      <a target="_blank" href="./assets/resume.pdf"><button class="btn btn-primary btn-lg">Download my résumé</button></a>
+    </div>-->
+  </div>
+</section>
+
+<!-- Projects  -->
+<section class="text-light text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="lead my-4">A selection of projects I have worked on that are worth discussing. Note that you can find more of my work on <a href="https://github.com/Alekseyyy" target="_blank">my GitHub profile</a>, and you can also download my résumé <a target="_blank" href="./assets/resume.pdf">here</a>.</p>
+    <div class="row text-center g-4">
+      <div class="col-md">
+        <div class="bg-dark text-light">
+          <div class="text-center">
+             <div class="h1 mb-3">
+               <i class="bi bi-laptop"></i>
+              </div>
+              <h3 class="mb-3">Project 1</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Iure, quas quidem possimus dolorum esse eligendi?
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="text-light">
+            <div class="text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-person-square"></i>
+              </div>
+              <h3 class="mb-3">Project 2</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Iure, quas quidem possimus dolorum esse eligendi?
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="text-light">
+            <div class="text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3 class="mb-3">Project 3</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Iure, quas quidem possimus dolorum esse eligendi?
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section> <br />
+
+<!-- Contact -->
+<section class="p-5 p-lg-0 pt-lg-5 text-center text-sm-start" id="contact">
+  <div class="container">
+    <h2>Support</h2>
+    
+    <p class="lead my-4">Donations are awesome! You can support me with the following ways:</p>
+    <div class="container text-center">
+      <a href="https://cash.app/$Aleksey3" target="_blank" title="Cash.App">
+        <img width="75px;" src="{{site.baseurl}}/assets/icons/CashApp.svg" alt="cashapp" />
+      </a> &nbsp; &nbsp; &nbsp;
+      <a href="https://account.venmo.com/u/Aleksey4" target="_blank" title="Venmo">
+        <img width="75px;" src="{{site.baseurl}}/assets/icons/Venmo.png" alt="venmo" />
+      </a>
+    </div>
+    </div>
+  </div>
+</section>
+
+
