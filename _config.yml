@@ -1,3 +1,13 @@
 
-theme: nekana
+title: Nekana Technologies
+author:
+  name: A. S. "Aleksey" Ahmann
+  email: alexander.ahmann@outlook.com
+description: > # this means to ignore newlines until "show_excerpts:"
+   Finesse in data-driven I.T. consulting and engineering. 
 
+url: "https://nekanatech.netlify.app"
+baseurl: "/"
+
+plugins:
+ - jekyll-sitemap
